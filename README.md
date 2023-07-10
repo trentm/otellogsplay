@@ -3,6 +3,19 @@
 Currently this is a proof-of-concept for an OTel Logs SDK appender for
 [Bunyan](https://github.com/trentm/node-bunyan).
 
+# Usage
+
+```sh
+npm install
+node bunyan-otel.js
+```
+
+This creates a Bunyan logger with an "OTelBunyanAppender" stream. The OTel Logs
+SDK is setup to emit records to the console. Any Bunyan logger methods are
+emitted to the stdout (the default) and through the Logs SDK.
+
+The [Bunyan appender is here](lib/OTelBunyanAppender.js).
+
 
 # Open Questions and TODOs
 
